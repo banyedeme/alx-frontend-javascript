@@ -1,11 +1,3 @@
-function getStudentsByLocation(students, city) {
-  if (!Array.isArray(students)) {
-    return [];
-  }
-  return students.filter((student) => student.location === city).map((student) => ({
-    id: student.id,
-    firstName: student.firstName,
-    location: student.location,
-  }));
+export default function getStudentsByLocation(arr, city) {
+  return arr.filter((student) => student.location === city);
 }
-module.exports = { getStudentsByLocation };
